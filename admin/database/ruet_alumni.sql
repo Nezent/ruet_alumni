@@ -42,16 +42,6 @@ CREATE TABLE `alumni` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `alumni`
---
-
-INSERT INTO `alumni` (`id`, `name`, `email`, `password`, `image`, `gender`, `department`, `series`, `company_name`, `joined`, `status`) VALUES
-(4, 'Anon', 'markjansenmartinez@gmail.com', '123456', '9272-Gb1nd17.jpg', 'Male', 'CSE', 2020, 'Amazon', '2023-07-31', 1),
-(6, 'Legends Never Die', 'jibon@bedona.com', '123456', '5504-Gb1nd17.jpg', 'Male', 'ECE', 2020, 'Google', '2023-07-31', 0);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `events`
 --
 
