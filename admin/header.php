@@ -31,6 +31,10 @@
             border: 3px solid #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+		.admin-picture {
+            border-radius: 50%;
+            object-fit: cover;
+        }
     </style>
 
 </head> 
@@ -87,7 +91,7 @@
 					    </div><!--//app-utility-item-->
 			            
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile"></a>
+				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/adiba.jpg" class="admin-picture" alt="user profile"></a>
 				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
 								<li><a class="dropdown-item" href="#">Account</a></li>
 								<li><a class="dropdown-item" href="#">Settings</a></li>
@@ -105,7 +109,7 @@
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding">
-		            <a class="app-logo" href="index.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">RUET</span></a>
+		            <a class="app-logo" href="index.php"><img class="logo-icon me-2" src="../assets/images/ruet.png" alt="logo"><span class="logo-text">RUET</span></a>
 	
 		        </div><!--//app-branding-->  
 		        
