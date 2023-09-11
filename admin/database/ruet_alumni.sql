@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2023 at 11:16 AM
+-- Generation Time: Sep 11, 2023 at 07:36 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -41,6 +41,8 @@ CREATE TABLE `alumni` (
   `status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `events`
 --
@@ -61,6 +63,26 @@ CREATE TABLE `events` (
 INSERT INTO `events` (`id`, `catagory`, `title`, `date`, `duration`, `price`) VALUES
 (5, 'Programming', 'RAPL Contest', '13-Sept-2023', 2, 100),
 (6, 'Electrical', 'Session With Rajjak Sir', '29-July-2023', 3, 1000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registers`
+--
+
+CREATE TABLE `registers` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `department` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `registers`
+--
+
+INSERT INTO `registers` (`id`, `name`, `email`, `department`) VALUES
+(4, 'Anon', 'sirajummunir30@gmail.com', 'ECE');
 
 -- --------------------------------------------------------
 
@@ -98,6 +120,12 @@ ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `registers`
+--
+ALTER TABLE `registers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -111,13 +139,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `alumni`
 --
 ALTER TABLE `alumni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `registers`
+--
+ALTER TABLE `registers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
