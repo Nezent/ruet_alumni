@@ -65,10 +65,11 @@
                       <?php if(!isset($_SESSION['alumni'])): ?>
                       <li class="scroll-to-section"><a href="login.php">Login</a></li>
                       <?php endif; ?>
-                      <?php if(isset($_SESSION['alumni'])): ?>
-                      <li class="scroll-to-section"><a href="#">Account</a></li>
+                      <?php if(isset($_SESSION['alumni'])): 
+                        $email = $_SESSION['alumni'];
+                        ?>
+                      <li class="scroll-to-section"><a href="account.php?email=<?php echo $email ?>">Account</a></li>
                       <?php endif; ?>
-                      <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -89,8 +90,8 @@
             <div class="item item-1">
               <div class="header-text">
                 <span class="category">RUET Alumni</span>
-                <h2>Welcome</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium laboriosam harum doloremque, debitis fugiat tempora reprehenderit eum sunt nesciunt esse explicabo, odio veniam unde, consequatur nobis omnis labore laborum eos?</p>
+                <h2>Heaven's Light is Our Guide</h2>
+                <p>Rajshahi University of Engineering and Technology (RUET) is a prestigious public engineering university in Bangladesh. Located in Rajshahi, it offers undergraduate and postgraduate programs in various engineering and architectural disciplines. RUET is renowned for its academic excellence, research contributions, and commitment to producing skilled engineers and architects.</p>
                 <div class="buttons">
                   <div class="main-button">
                     <a href="#">Register Now</a>
@@ -104,8 +105,9 @@
             <div class="item item-2">
               <div class="header-text">
                 <span class="category">RUET Alumni</span>
-                <h2>Get the best result out of your effort</h2>
-                <p>You are allowed to use this template for any educational or commercial purpose. You are not allowed to re-distribute the template ZIP file on any other website.</p>
+                <h2>Connecting RUET Alumni:Where Past Meets Future</h2>
+               <!--<p>Rajshahi University of Engineering and Technology (RUET) alumni comprise a diverse group of professionals, engineers, and leaders who have graduated from this renowned institution in Bangladesh. They have made significant contributions to various fields, including technology, academia, and industry, showcasing the university's commitment to producing accomplished graduates.</p>
+                      -->
                 <div class="buttons">
                   <div class="main-button">
                     <a href="#">Register Now</a>
@@ -119,8 +121,8 @@
             <div class="item item-3">
               <div class="header-text">
                 <span class="category">RUET Alumni</span>
-                <h2>Online Learning helps you save the time</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporious incididunt ut labore et dolore magna aliqua suspendisse.</p>
+                <h2>RUET Graduates Unite: Forging a Legacy of Success</h2>
+                <p>RUET alumni form a vibrant community of accomplished individuals, spanning various professions and industries. They collaborate, mentor, and contribute to RUET's growth, embodying excellence and leadership.</p>
                 <div class="buttons">
                   <div class="main-button">
                     <a href="#">Register Now</a>
@@ -152,7 +154,7 @@
               <h4>ECE</h4>
               <p class="text-truncate">Electrical & Computer Engineering</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="https://www.ece.ruet.ac.bd/">Read More</a>
               </div>
             </div>
           </div>
@@ -163,7 +165,76 @@
               <h4>CSE</h4>
               <p class="text-truncate">Computer Science Engineering</p>
               <div class="main-button">
+                <a href="https://www.cse.ruet.ac.bd/">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="main-content">
+              <h4>EEE</h4>
+              <p class="text-truncate">Electrical & Electronics Engineering</p>
+              <div class="main-button">
+                <a href="https://www.eee.ruet.ac.bd/">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="main-content">
+              <h4>IPE</h4>
+              <p class="text-truncate">Industrial and Production Engineering</p>
+              <div class="main-button">
+                <a href="https://www.ipe.ruet.ac.bd/">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="main-content">
+              <h4>MSE</h4>
+              <p class="text-truncate">Material and Science Engineering</p>
+              <div class="main-button">
                 <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="main-content">
+              <h4>CE</h4>
+              <p class="text-truncate">Civil Engineering</p>
+              <div class="main-button">
+                <a href="https://www.ce.ruet.ac.bd/">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="main-content">
+              <h4>ARCH</h4>
+              <p class="text-truncate">ARCHITECTURE</p>
+              <div class="main-button">
+                <a href="https://www.arch.ruet.ac.bd/">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="main-content">
+              <h4>GCE</h4>
+              <p class="text-truncate">Glass and Ceramic Engineering</p>
+              <div class="main-button">
+                <a href="https://www.gce.ruet.ac.bd/">Read More</a>
               </div>
             </div>
           </div>
@@ -174,7 +245,7 @@
               <h4>ETE</h4>
               <p class="text-truncate">Electrical & Telecommunication Engineering</p>
               <div class="main-button">
-                <a href="#">Read More</a>
+                <a href="https://www.ete.ruet.ac.bd/">Read More</a>
               </div>
             </div>
           </div>
@@ -196,8 +267,9 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                </div>
+                Registering on RUET's alumni website connects you with fellow graduates, provides access to exclusive resources, job opportunities, and helps you stay connected to your alma mater for networking and professional growth.
+
+              </div>
               </div>
             </div>
             <div class="accordion-item">
@@ -208,8 +280,8 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                </div>
+                RUET alumni collaborate through events, mentorship, and knowledge sharing. They support each other's careers, contribute to the university's development, and foster a sense of community and lifelong learning.
+              </div>
               </div>
             </div>
             <div class="accordion-item">
@@ -220,8 +292,7 @@
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.
-                </div>
+                RUET excels due to its exceptional faculty, rigorous academic programs, research contributions, and strong alumni network, all fostering excellence in engineering and architecture education and innovation.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -232,8 +303,7 @@
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.
-                </div>
+                Ruet alumni can provide support in various ways, including mentorship, job referrals, career advice, networking opportunities, and contributions to the university's development and projects.</div>
               </div>
             </div>
           </div>
@@ -241,10 +311,10 @@
         <div class="col-lg-5 align-self-center">
           <div class="section-heading">
             <h6>About Us</h6>
-            <h2>What make us the best academy online?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.</p>
+            <h2>What make RUET ALUMNI BEST</h2>
+            <p>RUET alumni are among the best because of their top-tier education, dedication, and commitment to excellence. They leverage their knowledge and experience to make a significant impact in various fields.</p>
             <div class="main-button">
-              <a href="#">Discover More</a>
+              <a href="https://www.reosabd.org/">Discover More</a>
             </div>
           </div>
         </div>
@@ -344,27 +414,27 @@
         <div class="col-lg-7">
           <div class="owl-carousel owl-testimonials">
             <div class="item">
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”</p>
+              <p>“"Attending the RUET reunion was a nostalgic whirlwind. Seeing old friends, reminiscing about our engineering days, and sharing life journeys in just one evening filled my heart with warmth and gratitude."</p>
               <div class="author">
                 <img src="assets/images/testimonial-author.jpg" alt="">
                 <span class="category">Full Stack Master</span>
-                <h4>Claude David</h4>
+                <h4>Engr. Tanzila Zaman</h4>
               </div>
             </div>
             <div class="item">
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”</p>
+              <p>“"The RUET reunion brought cherished memories back to life. Reconnecting with fellow alumni, swapping stories, and celebrating our shared journey was a heartwarming experience that left me feeling deeply connected."”</p>
               <div class="author">
                 <img src="assets/images/testimonial-author.jpg" alt="">
                 <span class="category">UI Expert</span>
-                <h4>Thomas Jefferson</h4>
+                <h4>Nokib Sarker</h4>
               </div>
             </div>
             <div class="item">
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravid.”</p>
-              <div class="author">
+              <p>“"The RUET reunion brought cherished memories back to life. Reconnecting with fellow alumni, swapping stories, and celebrating our shared journey was a heartwarming experience that left me feeling deeply connected."</p>
+              <div class="Web developer">
                 <img src="assets/images/testimonial-author.jpg" alt="">
                 <span class="category">Digital Animator</span>
-                <h4>Stella Blair</h4>
+                <h4>Shaon Radwan</h4>
               </div>
             </div>
           </div>
@@ -373,7 +443,7 @@
           <div class="section-heading">
             <h6>TESTIMONIALS</h6>
             <h2>What they say about us?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequuntur nostrum quam neque, itaque explicabo voluptatem sequi id iusto similique fuga optio quo cumque tempore temporibus voluptas et eum architecto!</p>
+            <p> Rajshahi University of Engineering and Technology (RUET) is a renowned institution in Bangladesh, dedicated to providing top-notch engineering and architectural education, cultivating innovation, and producing adept professionals to meet industry demands.</p>
           </div>
         </div>
       </div>
@@ -445,14 +515,14 @@
         <div class="col-lg-6  align-self-center">
           <div class="section-heading">
             <h6>Contact Us</h6>
-            <h2>Feel free to contact us anytime</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisquam velit soluta voluptates repudiandae, dolorem et nulla iure omnis, neque laborum corporis maiores aperiam exercitationem dolore nam vitae impedit tempore?</p>
+            <h2>Register for the uppcoming events</h2>
+            <p>RUET alumni events include reunions, career fairs, workshops, and seminars, fostering networking, knowledge exchange, and support among graduates.</p>
             
           </div>
         </div>
-        <div class="col-lg-6">
+       <div class="col-lg-6">
           <div class="contact-us-content">
-            <form id="contact-form" action="" method="post">
+            <form id="contact-form" action="register.php" method="post">
               <div class="row">
                 <div class="col-lg-12">
                   <fieldset>
@@ -461,17 +531,17 @@
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="text" name="email" id="email" pattern="" placeholder="Your Roll..." required="">
+                    <input type="email" name="email" id="email" placeholder="Your Email..." required="">
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <input type="text" name="text" id="email" pattern="" placeholder="Your Department..." required="">
+                    <input type="text" name="department" id="department" placeholder="Your Department..." required="">
                   </fieldset>
                 </div>
                 <div class="col-lg-12">
                   <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Register Now</button>
+                    <button type="submit" id="form-submit" class="orange-button" name="register">Register Now</button>
                   </fieldset>
                 </div>
               </div>
@@ -480,7 +550,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 
   <footer>
     <div class="container">

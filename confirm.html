@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #7B6ADA;
+            margin: 0;
+            padding: 0;
+        }
+
+        .confirmation-container {
+            max-width: 600px;
+            width: 400px;
+            height: 100px;
+            max-height: 100px;
+            margin: 0 0;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .confirmation-message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #7B6ADA;
+        }
+
+        .back-to-home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #F1F0FE;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-home-button:hover {
+            background-color: #7B6ADA;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-message">
+            Registration Successful!
+        </div>
+        <a href="index.php" class="back-to-home-button">Back to Home</a>
+    </div>
+</body>
+</html>

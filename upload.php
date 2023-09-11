@@ -19,19 +19,19 @@
     $targetHeight = 310;
 
 	list($originalWidth, $originalHeight) = getimagesize($tname);
-	$aspectRatio = $originalWidth / $originalHeight;
+	// $aspectRatio = $originalWidth / $originalHeight;
 	// Calculate new dimensions while maintaining aspect ratio
-	if ($aspectRatio > 1) {
-		$newWidth = $targetWidth;
-		$newHeight = $targetWidth / $aspectRatio;
-	} else {
-		$newWidth = $targetHeight * $aspectRatio;
-		$newHeight = $targetHeight;
-	}
+	// if ($targetWidth/$targetHeight > $aspectRatio) {
+	// 	$newWidth = $targetHeight * $aspectRatio;
+	// 	$newHeight = $targetHeight;
+	// } else {
+	// 	$newWidth = $targetWidth;
+	// 	$newHeight = $targetWidth / $aspectRatio;
+	// }
 	
 	$ext = pathinfo($pname, PATHINFO_EXTENSION);
 	// Create a new image with the calculated dimensions
-	$newImage = imagecreatetruecolor($newWidth, $newHeight);
+	$newImage = imagecreatetruecolor($targetWidth, $targetHeight);
 	
 	// Load the uploaded image
 	if($ext == "jpg" || $ext == "jpeg"){
@@ -42,7 +42,7 @@
 	}
 	
 	// // Resize the image
-	imagecopyresampled($newImage, $sourceImage, 0, 0, 0, 0, $newWidth, $newHeight, $originalWidth, $originalHeight);
+	imagecopyresampled($newImage, $sourceImage, 0, 0, 0, 0, $targetWidth, $targetHeight, $originalWidth, $originalHeight);
 
 	imagepng($newImage,'admin/assets/uploads/'.$pname);
 	imagedestroy($sourceImage);

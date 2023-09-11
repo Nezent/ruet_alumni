@@ -1,11 +1,74 @@
-<?php include 'header.php'; ?>
+<?php include_once 'admin/db_connect.php'; ?>
 	<?php 
-	if(isset($_GET['id'])){
-		$id = $_GET['id'];		
-		$user = $conn->query("SELECT * FROM alumni WHERE id=$id");
+	if(isset($_GET['email'])){
+		$id = $_GET['email'];		
+		$user = $conn->query("SELECT * FROM alumni WHERE email='$id'");
 		$row = $user->fetch_assoc();
 	
 	?>
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Admin</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="admin/assets/plugins/fontawesome/js/all.min.js"></script>
+    
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="admin/assets/css/portal.css">
+    <style>
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head> 
+
+<body class="app">   	
+    <header class="app-header fixed-top">	   	            
+        <div id="app-sidepanel" class="app-sidepanel"> 
+	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
+	        <div class="sidepanel-inner d-flex flex-column">
+		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
+		        <div class="app-branding">
+		            <a class="app-logo" href="index.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">RUET</span></a>
+	
+		        </div><!--//app-branding-->  
+		        
+			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
+				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+					    <li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link active" href="#">
+						        <span class="nav-icon">
+						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+		  <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+		</svg>
+						         </span>
+		                         <span class="nav-link-text">Overview</span>
+					        </a><!--//nav-link-->
+					    </li><!--//nav-item-->
+					    
+					    
+					    </ul><!--//footer-menu-->
+				    </nav>
+			    </div><!--//app-sidepanel-footer-->
+		       
+	        </div><!--//sidepanel-inner-->
+	    </div><!--//app-sidepanel-->
+    </header><!--//app-header-->
     <div class="app-wrapper">
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
@@ -35,7 +98,7 @@
 								    <div class="row justify-content-between align-items-center">
 									    <div class="col-auto">
 										    <div class="item-label mb-2"><strong>Photo</strong></div>
-										    <div class="item-data"><img class="profile-picture" src="assets/uploads/<?php echo $row['image'] ?>" alt=""></div>
+										    <div class="item-data"><img class="profile-picture" src="admin/assets/uploads/<?php echo $row['image'] ?>" alt=""></div>
 									    </div><!--//col-->
 									    <div class="col text-end">
 										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
@@ -79,7 +142,7 @@
 							    </div><!--//item-->
 						    </div><!--//app-card-body-->
 						    <div class="app-card-footer p-4 mt-auto">
-							   <a class="btn app-btn-secondary" href="#">Manage Profile</a>
+							   <a class="btn app-btn-secondary" href="logout.php">Logout</a>
 						    </div><!--//app-card-footer-->
 						   
 						</div><!--//app-card-->
@@ -150,7 +213,7 @@
 							    </div><!--//item-->
 						    </div><!--//app-card-body-->
 						    <div class="app-card-footer p-4 mt-auto">
-							   <a class="btn app-btn-secondary" href="#">Manage Preferences</a>
+							   <a class="btn app-btn-secondary" href="index.php">Back to Home</a>
 						    </div><!--//app-card-footer-->
 						   
 						</div><!--//app-card-->
@@ -160,4 +223,4 @@
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
 	    <?php } ?>
-	    <?php include 'footer.php'; ?>
+	    <?php include 'admin/footer.php'; ?>
